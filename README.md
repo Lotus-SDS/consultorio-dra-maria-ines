@@ -49,10 +49,23 @@ nada seja publicado por engano com valor inventado.
 | Instagram | rodapé | ícone inativo + "Perfis a confirmar" |
 | Fotos | `assets/` | placeholders azuis rotulados "imagem provisória" |
 | Convênios e pagamentos | seção "Dúvidas" | resposta remete ao telefone — confirmar antes de afirmar |
-| Domínio, canonical e og:image | `<head>` do `index.html` | comentário com as três linhas a acrescentar |
+| Domínio | `<head>` do `index.html` e dados estruturados | publicado como demonstração em `lotusdev.com.br/consultorio-dra-maria-ines/`; com domínio próprio, trocar as quatro URLs |
 
 Quando tudo estiver preenchido, remover no `index.html` o bloco `<div class="demo-bar">`
 e as classes `.slot` / `.demo-note`.
+
+## Publicação
+
+O site é publicado pelo [Lotus_site](https://github.com/Lotus-SDS/Lotus_site) em
+`https://lotusdev.com.br/consultorio-dra-maria-ines/`. Todo push na `main` deste repositório,
+direto ou pelo merge de um PR, avisa o Lotus_site pelo workflow `.github/workflows/lotus.yml`,
+e a versão nova entra no ar em poucos minutos.
+
+- Os links precisam continuar **relativos** (`css/styles.css`, não `/css/styles.css`): o site
+  roda dentro de `/consultorio-dra-maria-ines/`.
+- O `.dockerignore` define o que fica fora do ar (`preview/`, `.impeccable/`, os `.md`).
+- O aviso usa o secret `LOTUS_BOT_TOKEN`. Sem ele, o Lotus_site pega a versão nova na
+  verificação diária.
 
 ## Formulário
 

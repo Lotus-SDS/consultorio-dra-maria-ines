@@ -1,0 +1,8 @@
+# Fora da imagem publicada pelo Lotus_site: só o site vai para o ar.
+.git
+.dockerignore
+.github
+.impeccable
+preview
+*.md
+**/LEIA-ME.txt
